@@ -1,0 +1,100 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    199,
+                    98
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Project",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": true,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "1230138698003"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "158814606256"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Einfache Projektverwaltung in TYPO3.",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 7.6.0-8.7.99\n",
+            "disableLocalization": true,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "7.6.0-7.6.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "burkaprojects",
+        "name": "Burka Projects",
+        "originalExtensionKey": "burkaprojects",
+        "originalVendorName": "Joekolade",
+        "persons": [
+            {
+                "company": "Sch\u00e4fer - B\u00fcro f\u00fcr Webentwicklung",
+                "email": "joe@joekola.de",
+                "name": "Joe Sch\u00e4fer",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Project => list, show",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "key": "projektlist",
+                "name": "Projekt Liste"
+            }
+        ],
+        "vendorName": "Joekolade"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2017-07-06 01:42",
+        "extension_builder_version": "7.6.18",
+        "be_user": " (1)"
+    }
+}

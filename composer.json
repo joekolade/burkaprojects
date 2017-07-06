@@ -1,0 +1,15 @@
+{
+  "name": "joekolade/burkaprojects",
+  "description": "Extension by joekolade",
+  "type": "typo3-cms-extension",
+  "require": {
+    "typo3/cms-core": "7.6.0-8.7.99"
+  },
+  "replace": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Joekolade\\Burkaprojects\\": "Classes/"
+    }
+  }
+}

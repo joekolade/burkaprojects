@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-06T13:42:49Z" product-name="burkaprojects">
+		<header/>
+		<body>
+			<trans-unit id="tx_burkaprojects_domain_model_projektlist">
+				<source>Projekt Liste</source>
+			</trans-unit>
+			<trans-unit id="tx_burkaprojects_domain_model_projektlist.description">
+				<source>Einfache Projektverwaltung in TYPO3.</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
