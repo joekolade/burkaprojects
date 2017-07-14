@@ -43,7 +43,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         if ($this->settings['category']) {
             $category = $this->categoryRepository->findByUid($this->settings['category']);
 
-            $projects = $this->projectRepository->findByCategoy($category);
+            $projects = $this->projectRepository->findByCategory($category);
 
         } else {
             $projects = $this->projectRepository->findAll();
