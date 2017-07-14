@@ -26,15 +26,28 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     protected $projectRepository = null;
 
     /**
+     * categoryRepository
+     *
+     * @var \Joekolade\Burkaprojects\Domain\Repository\CategoryRepository
+     * @inject
+     */
+    protected $categoryRepository = null;
+
+    /**
      * action list
      *
      * @return void
      */
     public function listAction()
     {
-        // TODO: Categorization
-        // https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/Categories/Index.html
-        $projects = $this->projectRepository->findAll();
+        if ($this->settings['category']) {
+            $category = $this->categoryRepository->findByUid($this->settings['category']);
+
+            $projects = $this->projectRepository->findByCategoy($category);
+
+        } else {
+            $projects = $this->projectRepository->findAll();
+        }
         $this->view->assign('projects', $projects);
     }
 

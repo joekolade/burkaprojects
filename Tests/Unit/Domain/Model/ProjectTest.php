@@ -174,12 +174,12 @@ class ProjectTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getCategoryReturnsInitialValueForCategory()
+    public function getCategoriesReturnsInitialValueForCategory()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
-            $this->subject->getCategory()
+            $this->subject->getCategories()
         );
 
     }
@@ -187,16 +187,16 @@ class ProjectTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function setCategoryForObjectStorageContainingCategorySetsCategory()
+    public function setCategoriesForObjectStorageContainingCategorySetsCategories()
     {
         $category = new \Joekolade\Burkaprojects\Domain\Model\Category();
-        $objectStorageHoldingExactlyOneCategory = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $objectStorageHoldingExactlyOneCategory->attach($category);
-        $this->subject->setCategory($objectStorageHoldingExactlyOneCategory);
+        $objectStorageHoldingExactlyOneCategories = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneCategories->attach($category);
+        $this->subject->setCategories($objectStorageHoldingExactlyOneCategories);
 
         self::assertAttributeEquals(
-            $objectStorageHoldingExactlyOneCategory,
-            'category',
+            $objectStorageHoldingExactlyOneCategories,
+            'categories',
             $this->subject
         );
 
@@ -205,16 +205,16 @@ class ProjectTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function addCategoryToObjectStorageHoldingCategory()
+    public function addCategoryToObjectStorageHoldingCategories()
     {
         $category = new \Joekolade\Burkaprojects\Domain\Model\Category();
-        $categoryObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $categoriesObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
 
-        $categoryObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($category));
-        $this->inject($this->subject, 'category', $categoryObjectStorageMock);
+        $categoriesObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($category));
+        $this->inject($this->subject, 'categories', $categoriesObjectStorageMock);
 
         $this->subject->addCategory($category);
     }
@@ -222,16 +222,16 @@ class ProjectTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function removeCategoryFromObjectStorageHoldingCategory()
+    public function removeCategoryFromObjectStorageHoldingCategories()
     {
         $category = new \Joekolade\Burkaprojects\Domain\Model\Category();
-        $categoryObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $categoriesObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();
 
-        $categoryObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($category));
-        $this->inject($this->subject, 'category', $categoryObjectStorageMock);
+        $categoriesObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($category));
+        $this->inject($this->subject, 'categories', $categoriesObjectStorageMock);
 
         $this->subject->removeCategory($category);
 

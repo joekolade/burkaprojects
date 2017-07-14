@@ -7,7 +7,7 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Joekolade.Burkaprojects',
-            'Projektlist',
+            'Projectlist',
             [
                 'Project' => 'list, show'
             ],
@@ -22,13 +22,13 @@ call_user_func(
 		'mod {
 			wizards.newContentElement.wizardItems.plugins {
 				elements {
-					projektlist {
-						icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Icons/user_plugin_projektlist.svg
-						title = LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_projektlist
-						description = LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_projektlist.description
+					projectlist {
+						icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Icons/user_plugin_projectlist.svg
+						title = LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_projectlist
+						description = LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_projectlist.description
 						tt_content_defValues {
 							CType = list
-							list_type = burkaprojects_projektlist
+							list_type = burkaprojects_projectlist
 						}
 					}
 				}

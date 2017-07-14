@@ -1,15 +1,15 @@
 
-plugin.tx_burkaprojects_projektlist {
+plugin.tx_burkaprojects_projectlist {
   view {
     templateRootPaths.0 = EXT:burkaprojects/Resources/Private/Templates/
-    templateRootPaths.1 = {$plugin.tx_burkaprojects_projektlist.view.templateRootPath}
+    templateRootPaths.1 = {$plugin.tx_burkaprojects_projectlist.view.templateRootPath}
     partialRootPaths.0 = EXT:burkaprojects/Resources/Private/Partials/
-    partialRootPaths.1 = {$plugin.tx_burkaprojects_projektlist.view.partialRootPath}
+    partialRootPaths.1 = {$plugin.tx_burkaprojects_projectlist.view.partialRootPath}
     layoutRootPaths.0 = EXT:burkaprojects/Resources/Private/Layouts/
-    layoutRootPaths.1 = {$plugin.tx_burkaprojects_projektlist.view.layoutRootPath}
+    layoutRootPaths.1 = {$plugin.tx_burkaprojects_projectlist.view.layoutRootPath}
   }
   persistence {
-    storagePid = {$plugin.tx_burkaprojects_projektlist.persistence.storagePid}
+    storagePid = {$plugin.tx_burkaprojects_projectlist.persistence.storagePid}
     #recursive = 1
   }
   features {

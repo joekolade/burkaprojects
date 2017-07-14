@@ -48,11 +48,11 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $images = null;
 
     /**
-     * category
+     * categories
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Joekolade\Burkaprojects\Domain\Model\Category>
      */
-    protected $category = null;
+    protected $categories = null;
 
     /**
      * Returns the title
@@ -95,7 +95,7 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected function initStorageObjects()
     {
         $this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->category = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->categories = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -191,7 +191,7 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function addCategory(\Joekolade\Burkaprojects\Domain\Model\Category $category)
     {
-        $this->category->attach($category);
+        $this->categories->attach($categories);
     }
 
     /**
@@ -202,27 +202,27 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function removeCategory(\Joekolade\Burkaprojects\Domain\Model\Category $categoryToRemove)
     {
-        $this->category->detach($categoryToRemove);
+        $this->categories->detach($categoryToRemove);
     }
 
     /**
-     * Returns the category
+     * Returns the categories
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Joekolade\Burkaprojects\Domain\Model\Category> $category
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Joekolade\Burkaprojects\Domain\Model\Category> categories
      */
-    public function getCategory()
+    public function getCategories()
     {
-        return $this->category;
+        return $this->categories;
     }
 
     /**
-     * Sets the category
+     * Sets the categories
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Joekolade\Burkaprojects\Domain\Model\Category> $category
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Joekolade\Burkaprojects\Domain\Model\Category> $categories
      * @return void
      */
-    public function setCategory(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $category)
+    public function setCategories(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $categories)
     {
-        $this->category = $category;
+        $this->categories = $categories;
     }
 }

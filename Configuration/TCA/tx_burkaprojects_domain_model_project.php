@@ -14,14 +14,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-		'searchFields' => 'title,teaser,description,images,category',
+		'searchFields' => 'title,teaser,description,images,categories',
         'iconfile' => 'EXT:burkaprojects/Resources/Public/Icons/tx_burkaprojects_domain_model_project.gif'
     ],
     'interface' => [
-		'showRecordFieldList' => 'hidden, title, teaser, description, images, category',
+		'showRecordFieldList' => 'hidden, title, teaser, description, images, categories',
     ],
     'types' => [
-		'1' => ['showitem' => 'hidden, title, teaser, description, images, category, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'hidden, title, teaser, description, images, categories, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
 		't3ver_label' => [
@@ -145,14 +145,14 @@ return [
 			    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
 	    ],
-	    'category' => [
+	    'categories' => [
 	        'exclude' => false,
-	        'label' => 'LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_project.category',
+	        'label' => 'LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_project.categories',
 	        'config' => [
 			    'type' => 'select',
 			    'renderType' => 'selectMultipleSideBySide',
 			    'foreign_table' => 'tx_burkaprojects_domain_model_category',
-			    'MM' => 'tx_burkaprojects_project_category_mm',
+			    'MM' => 'sys_category_record_mm',
 			    'size' => 10,
 			    'autoSizeMax' => 30,
 			    'maxitems' => 9999,

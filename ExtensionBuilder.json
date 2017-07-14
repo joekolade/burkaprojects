@@ -23,7 +23,7 @@
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
                     "aggregateRoot": true,
-                    "categorizable": true,
+                    "categorizable": false,
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
@@ -82,7 +82,7 @@
                             "lazyLoading": false,
                             "propertyIsExcludeField": false,
                             "relationDescription": "",
-                            "relationName": "category",
+                            "relationName": "categories",
                             "relationType": "manyToMany",
                             "relationWire": "[wired]",
                             "renderType": "selectSingleBox",
@@ -187,7 +187,7 @@
                     "noncacheableActions": "",
                     "switchableActions": ""
                 },
-                "key": "projektlist",
+                "key": "projectlist",
                 "name": "Projekt Liste"
             }
         ],
@@ -208,7 +208,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-07-14 11:11",
+        "last_modified": "2017-07-14 11:35",
         "extension_builder_version": "7.6.18",
         "be_user": " (1)"
     }

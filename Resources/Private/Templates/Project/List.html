@@ -17,28 +17,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:flashMessages />
 
-<table  class="tx_burkaprojects" >
-	<tr>
-		<th><f:translate key="tx_burkaprojects_domain_model_project.title" /></th>
-		<th><f:translate key="tx_burkaprojects_domain_model_project.teaser" /></th>
-		<th><f:translate key="tx_burkaprojects_domain_model_project.description" /></th>
-		<th><f:translate key="tx_burkaprojects_domain_model_project.images" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
 
 	<f:for each="{projects}" as="project">
-		<tr>
-			<td><f:link.action action="show" arguments="{project : project}"> {project.title}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{project : project}"> {project.teaser}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{project : project}"> {project.description}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{project : project}"> {project.images}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{project : project}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{project : project}">Delete</f:link.action></td>
-		</tr>
+		<f:link.action action="show" arguments="{project : project}"> {project.title}</f:link.action>
 	</f:for>
-</table>
 
-<f:link.action action="new">New Project</f:link.action>
 </f:section>
 </html>

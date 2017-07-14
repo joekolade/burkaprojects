@@ -10,7 +10,7 @@ CREATE TABLE tx_burkaprojects_domain_model_project (
 	teaser text NOT NULL,
 	description text NOT NULL,
 	images int(11) unsigned DEFAULT '0' NOT NULL,
-	category int(11) unsigned DEFAULT '0' NOT NULL,
+	categories int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -72,16 +72,9 @@ CREATE TABLE tx_burkaprojects_domain_model_category (
 );
 
 #
-# Table structure for table 'tx_burkaprojects_domain_model_project'
+# Table structure for table 'sys_category_record_mm'
 #
-CREATE TABLE tx_burkaprojects_domain_model_project (
-	categories int(11) unsigned DEFAULT '0' NOT NULL,
-);
-
-#
-# Table structure for table 'tx_burkaprojects_project_category_mm'
-#
-CREATE TABLE tx_burkaprojects_project_category_mm (
+CREATE TABLE sys_category_record_mm (
 	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) unsigned DEFAULT '0' NOT NULL,

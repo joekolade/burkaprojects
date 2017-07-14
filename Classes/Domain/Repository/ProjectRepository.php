@@ -23,4 +23,21 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     protected $defaultOrderings = array(
         'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
     );
+
+    /**
+     * Find with the given category
+     *
+     * @param \Joekolade\Burkaprojects\Domain\Model\Category $category
+     */
+    public function findByCategory($category = NULL)
+    {
+        $query = $this->createQuery();
+
+        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($category, 'Repo cat');
+
+        if ($category) {
+            $query->matching($query->logicalAnd($query->contains('categories', $category)));
+        }
+        return $query->execute();
+    }
 }
