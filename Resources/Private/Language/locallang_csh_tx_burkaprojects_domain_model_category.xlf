@@ -12,17 +12,8 @@
 			<trans-unit id="title.description">
 				<source>title</source>
 			</trans-unit>
-			<trans-unit id="teaser.description">
-				<source>teaser</source>
-			</trans-unit>
-			<trans-unit id="description.description">
-				<source>description</source>
-			</trans-unit>
-			<trans-unit id="images.description">
-				<source>images</source>
-			</trans-unit>
-			<trans-unit id="category.description">
-				<source>category</source>
+			<trans-unit id="listpid.description">
+				<source>listpid</source>
 			</trans-unit>
 		</body>
 	</file>

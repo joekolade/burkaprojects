@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-06T13:42:49Z" product-name="burkaprojects">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-14T22:58:11Z" product-name="burkaprojects">
 		<header/>
 		<body>
 			<trans-unit id="tx_burkaprojects_domain_model_projektlist">
@@ -14,6 +14,27 @@
 			</trans-unit>
 			<trans-unit id="tx_burkaprojects_domain_model_project.title">
 				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_burkaprojects_domain_model_project.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_burkaprojects_domain_model_project.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_burkaprojects_domain_model_project.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_burkaprojects_domain_model_project.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_burkaprojects_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_burkaprojects_domain_model_category.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_burkaprojects_domain_model_category.listpid">
+				<source>Listpid</source>
 			</trans-unit>
 		</body>
 	</file>

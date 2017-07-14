@@ -8,5 +8,31 @@
 		{project.title}
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_burkaprojects_domain_model_project.teaser" />
+		</td>
+		<td>
+		{project.teaser}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_burkaprojects_domain_model_project.description" />
+		</td>
+		<td>
+		{project.description}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_burkaprojects_domain_model_project.images" />
+		</td>
+		<td>
+				<f:for each="{project.images}" as="image" >
+					<f:image src="{image.originalResource.publicUrl}" width="200"/>
+				</f:for>
+		</td>
+	</tr>
 </table>
 </html>

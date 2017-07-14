@@ -34,7 +34,6 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     {
         // TODO: Categorization
         // https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/Categories/Index.html
-
         $projects = $this->projectRepository->findAll();
         $this->view->assign('projects', $projects);
     }

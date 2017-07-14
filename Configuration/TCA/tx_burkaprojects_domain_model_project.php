@@ -14,14 +14,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-		'searchFields' => 'title',
+		'searchFields' => 'title,teaser,description,images,category',
         'iconfile' => 'EXT:burkaprojects/Resources/Public/Icons/tx_burkaprojects_domain_model_project.gif'
     ],
     'interface' => [
-		'showRecordFieldList' => 'hidden, title',
+		'showRecordFieldList' => 'hidden, title, teaser, description, images, category',
     ],
     'types' => [
-		'1' => ['showitem' => 'hidden, title, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'hidden, title, teaser, description, images, category, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
 		't3ver_label' => [
@@ -76,6 +76,114 @@ return [
 			    'type' => 'input',
 			    'size' => 30,
 			    'eval' => 'trim,required'
+			],
+	    ],
+	    'teaser' => [
+	        'exclude' => false,
+	        'label' => 'LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_project.teaser',
+	        'config' => [
+			    'type' => 'text',
+			    'cols' => 40,
+			    'rows' => 15,
+			    'eval' => 'trim'
+			]
+	    ],
+	    'description' => [
+	        'exclude' => false,
+	        'label' => 'LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_project.description',
+	        'config' => [
+			    'type' => 'text',
+			    'cols' => 40,
+			    'rows' => 15,
+			    'eval' => 'trim',
+			],
+	        'defaultExtras' => 'richtext:rte_transform[mode=ts_css]'
+	    ],
+	    'images' => [
+	        'exclude' => false,
+	        'label' => 'LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_project.images',
+	        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+			    'images',
+			    [
+			        'appearance' => [
+			            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+			        ],
+			        'foreign_types' => [
+			            '0' => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ]
+			        ],
+			        'maxitems' => 8
+			    ],
+			    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+			),
+	    ],
+	    'category' => [
+	        'exclude' => false,
+	        'label' => 'LLL:EXT:burkaprojects/Resources/Private/Language/locallang_db.xlf:tx_burkaprojects_domain_model_project.category',
+	        'config' => [
+			    'type' => 'select',
+			    'renderType' => 'selectMultipleSideBySide',
+			    'foreign_table' => 'tx_burkaprojects_domain_model_category',
+			    'MM' => 'tx_burkaprojects_project_category_mm',
+			    'size' => 10,
+			    'autoSizeMax' => 30,
+			    'maxitems' => 9999,
+			    'multiple' => 0,
+			    'wizards' => [
+			        '_PADDING' => 1,
+			        '_VERTICAL' => 1,
+			        'edit' => [
+			            'module' => [
+			                'name' => 'wizard_edit',
+			            ],
+			            'type' => 'popup',
+			            'title' => 'Edit', // todo define label: LLL:EXT:.../Resources/Private/Language/locallang_tca.xlf:wizard.edit
+			            'icon' => 'EXT:backend/Resources/Public/Images/FormFieldWizard/wizard_edit.gif',
+			            'popup_onlyOpenIfSelected' => 1,
+			            'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
+			        ],
+			        'add' => [
+			            'module' => [
+			                'name' => 'wizard_add',
+			            ],
+			            'type' => 'script',
+			            'title' => 'Create new', // todo define label: LLL:EXT:.../Resources/Private/Language/locallang_tca.xlf:wizard.add
+			            'icon' => 'EXT:backend/Resources/Public/Images/FormFieldWizard/wizard_add.gif',
+			            'params' => [
+			                'table' => 'tx_burkaprojects_domain_model_category',
+			                'pid' => '###CURRENT_PID###',
+			                'setValue' => 'prepend'
+			            ],
+			        ],
+			    ],
 			],
 	    ],
     ],
