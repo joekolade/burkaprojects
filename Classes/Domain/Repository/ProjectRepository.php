@@ -33,8 +33,6 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     {
         $query = $this->createQuery();
 
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($category, 'Repo cat');
-
         if ($category) {
             $query->matching($query->logicalAnd($query->contains('categories', $category)));
         }

@@ -53,6 +53,7 @@ overwriteSettings:
   Resources:
     Private:
       #Language: merge
+      Partials: keep
       Templates: keep
 
   ext_icon.gif: keep
