@@ -13,7 +13,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Burka Projects',
     'description' => 'Einfache Projektverwaltung in TYPO3.',
-    'category' => 'distribution',
+    'category' => 'plugin',
     'author' => 'Joe Schäfer',
     'author_email' => 'joe@joekola.de',
     'state' => 'alpha',
