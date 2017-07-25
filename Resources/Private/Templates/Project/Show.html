@@ -9,8 +9,13 @@
         </div>
         <div class="col-sm-4">
             <p class="text-right">
-                zurück zur Übersicht<br>
-                {category.title}
+                <f:link.page pageUid="{settings.overview}">
+                    zurück zur Übersicht
+                </f:link.page>
+                <br>
+                <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.pageid')}">
+                    {category.title}
+                </f:link.page>
             </p>
         </div>
     </div>
@@ -38,10 +43,23 @@
     <div class="row">
         <f:for each="{images}" as="image" iteration="iteration">
             <div class="col-xs-6">
-                <f:image image="{image}" class="img-responsive"></f:image>
+                <f:render section="image" arguments="{image: image}"></f:render>
             </div>
+            <f:if condition="!{iteration.isLast}">
+                <f:if condition="{iteration.isEven}">
+                    </div><div class="row">
+                </f:if>
+            </f:if>
         </f:for>
     </div>
+</f:section>
+
+<f:section name="image">
+
+    <img src="fileadmin/_processed_/5/7/csm_Hersteller_Umlaufregale_Zahnrad_10902aaf75.jpg" alt="Hersteller Paternoster Regale (Umlaufregale) und Lagersysteme" title="" srcset="fileadmin/_processed_/5/7/csm_Hersteller_Umlaufregale_Zahnrad_81b2c31cf3.jpg 480w, fileadmin/_processed_/5/7/csm_Hersteller_Umlaufregale_Zahnrad_b483f25ec3.jpg 320w" sizes="auto">
+
+    <f:image image="{image}" class="img-responsive"></f:image>
+
 </f:section>
 
 </html>

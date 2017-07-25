@@ -12,4 +12,9 @@ plugin.tx_burkaprojects_projectlist {
     # cat=plugin.tx_burkaprojects_projectlist//a; type=string; label=Default storage PID
     storagePid = 2
   }
+
+  settings {
+    # cat=plugin.tx_burkaprojects_projectlist//a; type=integer; label=PID of Overview page
+    overview = 1
+  }
 }

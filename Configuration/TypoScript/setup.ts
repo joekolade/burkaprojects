@@ -18,7 +18,13 @@ plugin.tx_burkaprojects_projectlist {
   mvc {
     #callDefaultActionIfActionCantBeResolved = 1
   }
+  settings {
+    overview = {$plugin.tx_burkaprojects_projectlist.settings.overview}
+  }
 }
+
+lib.pageid = TEXT
+lib.pageid.data = page:uid
 
 page.includeCSS {
   tx-burkaprojects = EXT:burkaprojects/Resources/Public/Css/burkaprojects_styles.css
