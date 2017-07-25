@@ -62,6 +62,8 @@
     <f:link.page pageUid="{f:uri.image(image: image)}" class="tx-burkaprojects-magnificpopup" rel="magnificpopup[a]">
         <f:media
                 file="{image}"
+                width="{settings.detail.imageWidth}"
+                height="{settings.detail.imageHeight}"
                 class="img-responsive"
                 alt="{image.originalResource.alternative}"
                 title="{image.originalResource.title}"

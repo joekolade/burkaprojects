@@ -20,13 +20,13 @@ plugin.tx_burkaprojects_projectlist {
     list {
       # 16 / 9
       imageWidth = 931
-      imageHeight = 524
+      imageHeight = 524c
     }
 
     detail {
       # 16 / 9
       imageWidth = 354
-      imageHeight = 199
+      imageHeight = 199c
     }
   }
 }
