@@ -16,5 +16,17 @@ plugin.tx_burkaprojects_projectlist {
   settings {
     # cat=plugin.tx_burkaprojects_projectlist//a; type=integer; label=PID of Overview page
     overview = 1
+
+    list {
+      # 16 / 9
+      imageWidth = 931
+      imageHeight = 524
+    }
+
+    detail {
+      # 16 / 9
+      imageWidth = 354
+      imageHeight = 199
+    }
   }
 }

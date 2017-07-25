@@ -56,10 +56,23 @@
 
 <f:section name="image">
 
-    <img src="fileadmin/_processed_/5/7/csm_Hersteller_Umlaufregale_Zahnrad_10902aaf75.jpg" alt="Hersteller Paternoster Regale (Umlaufregale) und Lagersysteme" title="" srcset="fileadmin/_processed_/5/7/csm_Hersteller_Umlaufregale_Zahnrad_81b2c31cf3.jpg 480w, fileadmin/_processed_/5/7/csm_Hersteller_Umlaufregale_Zahnrad_b483f25ec3.jpg 320w" sizes="auto">
-
-    <f:image image="{image}" class="img-responsive"></f:image>
-
+        <f:if condition="{image.originalResource.description}">
+            <figure>
+        </f:if>
+    <f:link.page pageUid="{f:uri.image(image: image)}" class="tx-burkaprojects-magnificpopup" rel="magnificpopup[a]">
+        <f:media
+                file="{image}"
+                class="img-responsive"
+                alt="{image.originalResource.alternative}"
+                title="{image.originalResource.title}"
+        />
+    </f:link.page>
+        <f:if condition="{image.originalResource.description}">
+            <figcaption>
+                {image.originalResource.description}
+            </figcaption>
+            </figure>
+        </f:if>
 </f:section>
 
 </html>

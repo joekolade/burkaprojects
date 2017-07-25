@@ -20,6 +20,15 @@ plugin.tx_burkaprojects_projectlist {
   }
   settings {
     overview = {$plugin.tx_burkaprojects_projectlist.settings.overview}
+
+    list {
+      imageWidth = {$plugin.tx_burkaprojects_projectlist.settings.list.imageWidth}
+      imageHeight = {$plugin.tx_burkaprojects_projectlist.settings.list.imageHeight}
+    }
+    detail {
+      imageWidth = {$plugin.tx_burkaprojects_projectlist.settings.detail.imageWidth}
+      imageHeight = {$plugin.tx_burkaprojects_projectlist.settings.detail.imageHeight}
+    }
   }
 }
 
@@ -28,6 +37,9 @@ lib.pageid.data = page:uid
 
 page.includeCSS {
   tx-burkaprojects = EXT:burkaprojects/Resources/Public/Css/burkaprojects_styles.css
+}
+page.includeJSFooter {
+  tx-burkaprojects = EXT:burkaprojects/Resources/Public/Javascript/burkaprojects.js
 }
 
 plugin.tx_burkaprojects._CSS_DEFAULT_STYLE (

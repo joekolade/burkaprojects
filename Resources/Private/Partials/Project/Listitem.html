@@ -7,7 +7,14 @@
         </div>
         <div class="col-md-6">
             <f:if condition="{project.images.0}">
-                <f:image image="{project.images.0}" />
+                <f:link.action action="show" arguments="{project : project}">
+                    <f:media
+                            file="{project.images.0}"
+                            class="img-responsive"
+                            alt="{image.originalResource.alternative}"
+                            title="{image.originalResource.title}"
+                    />
+                </f:link.action>
             </f:if>
         </div>
     </div>
