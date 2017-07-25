@@ -6,6 +6,11 @@
             <f:link.action action="show" arguments="{project : project}">
                 <h3>{project.title}</h3>
             </f:link.action>
+            <f:if condition="{project.teaser}">
+                <p class="tx-burkaproject-teaser">
+                    {project.teaser}
+                </p>
+            </f:if>
         </div>
         <div class="col-md-6">
             <f:if condition="{project.images.0}">
