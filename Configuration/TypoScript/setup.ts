@@ -20,6 +20,10 @@ plugin.tx_burkaprojects_projectlist {
   }
 }
 
+page.includeCSS {
+  tx-burkaprojects = EXT:burkaprojects/Resources/Public/Css/burkaprojects_styles.css
+}
+
 plugin.tx_burkaprojects._CSS_DEFAULT_STYLE (
     textarea.f3-form-error {
         background-color:#FF9F9F;

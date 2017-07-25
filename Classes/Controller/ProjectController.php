@@ -59,6 +59,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function showAction(\Joekolade\Burkaprojects\Domain\Model\Project $project)
     {
+        $this->view->assign('category', $this->categoryRepository->findByUid($this->settings['category']));
         $this->view->assign('project', $project);
     }
 }
