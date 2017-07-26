@@ -10,23 +10,6 @@ plugin.tx_burkaprojects_projectlist {
   }
   persistence {
     # cat=plugin.tx_burkaprojects_projectlist//a; type=string; label=Default storage PID
-    storagePid = 2
-  }
-
-  settings {
-    # cat=plugin.tx_burkaprojects_projectlist//a; type=integer; label=PID of Overview page
-    overview = 1
-
-    list {
-      # 16 / 9
-      imageWidth = 931
-      imageHeight = 524c
-    }
-
-    detail {
-      # 16 / 9
-      imageWidth = 354
-      imageHeight = 199c
-    }
+    storagePid =
   }
 }
