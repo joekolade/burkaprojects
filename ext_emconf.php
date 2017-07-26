@@ -27,6 +27,7 @@ $EM_CONF[$_EXTKEY] = [
             'typo3' => '7.6.0-8.7.99',
             'fluid-styled-responsive-images' => '',
             'cs_seo' => '',
+            'jh_magnificpopup' => '',
         ],
         'conflicts' => [],
         'suggests' => [],

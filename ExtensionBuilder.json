@@ -159,8 +159,8 @@
         "emConf": {
             "category": "plugin",
             "custom_category": "",
-            "dependsOn": "typo3 => 7.6.0-8.7.99\nfluid-styled-responsive-images =>\ncs_seo =>\n",
-            "disableLocalization": true,
+            "dependsOn": "typo3 => 7.6.0-8.7.99\nfluid-styled-responsive-images =>\ncs_seo =>\njh_magnificpopup =>\n",
+            "disableLocalization": false,
             "disableVersioning": false,
             "skipGenerateDocumentationTemplate": true,
             "sourceLanguage": "en",
@@ -208,7 +208,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-07-26 03:01",
+        "last_modified": "2017-07-26 03:23",
         "extension_builder_version": "7.6.18",
         "be_user": " (1)"
     }
