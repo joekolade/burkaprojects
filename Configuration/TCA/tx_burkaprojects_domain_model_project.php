@@ -152,13 +152,13 @@ return [
 			    'type' => 'select',
 			    'renderType' => 'selectMultipleSideBySide',
 			    'foreign_table' => 'tx_burkaprojects_domain_model_category',
-			    'MM' => 'tx_burkaprojects_project_category_mm',
+			    'MM' => 'sys_category_record_mm',
 			    'size' => 10,
 			    'autoSizeMax' => 30,
 			    'maxitems' => 9999,
 			    'multiple' => 0,
 			    'wizards' => [
-			        '_PADDING' => 1,
+			        '_PADDING' => 1,over
 			        '_VERTICAL' => 1,
 			        'edit' => [
 			            'module' => [

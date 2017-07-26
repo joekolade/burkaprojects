@@ -29,7 +29,7 @@ plugin.tx_csseo.sitemap {
             categoryField =
 
             # string; if categories were saved in a MM-Table set here the name of the table
-            categoryMMTable = tx_burkaprojects_project_category_mm
+            categoryMMTable = sys_category_record_mm
 
             # boolean; true if the MM table has a column 'tablenames' which contains the current record table
             categoryMMTablenames = 0
