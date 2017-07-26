@@ -32,7 +32,6 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     public function findByCategory($category = NULL)
     {
         $query = $this->createQuery();
-
         if ($category) {
             $query->matching($query->logicalAnd($query->contains('categories', $category)));
         }
