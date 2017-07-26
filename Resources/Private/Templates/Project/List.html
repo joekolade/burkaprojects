@@ -6,6 +6,9 @@
 </f:section>
 
 <f:section name="main">
+    <f:if condition="{projects}">
+        <f:then>
+
     <div class="row">
         <f:for each="{projects}" as="project">
 
@@ -13,6 +16,11 @@
 
         </f:for>
     </div>
+        </f:then>
+        <f:else>
+            Im Moment stehen keine Projekte in der Kategorie {category.title} zur Verfügung.
+        </f:else>
+    </f:if>
 
 </f:section>
 </html>
