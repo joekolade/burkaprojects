@@ -6,6 +6,14 @@
     <ROOT>
         <type>array</type>
         <el>
+            <settings.listtitle>
+                <TCEforms>
+                    <label>Listen Titel</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </settings.listtitle>
             <settings.category>
                 <TCEforms>
                     <label>Category</label>

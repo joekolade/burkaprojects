@@ -2,7 +2,9 @@
 <f:layout name="Default"/>
 
 <f:section name="header">
-
+    <f:if condition="{settings.listtitle}">
+        <h2>{settings.listtitle}</h2>
+    </f:if>
 </f:section>
 
 <f:section name="main">

@@ -53,6 +53,7 @@ overwriteSettings:
   Resources:
     Private:
       #Language: merge
+      Layouts: keep
       Partials: keep
       Templates: keep
 
