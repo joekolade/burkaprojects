@@ -23,19 +23,9 @@ plugin.tx_csseo.sitemap {
             languageUids =
 
             # comma separated list; display only records with this categories
-            categories = 1,2,3,4
+            categories =
 
-            # string; if categories were saved in the same table, set here the field name
-            categoryField =
-
-            # string; if categories were saved in a MM-Table set here the name of the table
-            categoryMMTable = sys_category_record_mm
-
-            # boolean; true if the MM table has a column 'tablenames' which contains the current record table
-            categoryMMTablenames = 0
-
-            # string; if set the column 'fieldname' of the MM-table must be this
-            categoryMMFieldname =
         }
+        burkaprojects_alu >
     }
 }

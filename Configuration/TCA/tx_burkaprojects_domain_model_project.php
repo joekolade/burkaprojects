@@ -158,7 +158,7 @@ return [
 			    'maxitems' => 9999,
 			    'multiple' => 0,
 			    'wizards' => [
-			        '_PADDING' => 1,over
+			        '_PADDING' => 1,
 			        '_VERTICAL' => 1,
 			        'edit' => [
 			            'module' => [
