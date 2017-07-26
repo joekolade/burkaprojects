@@ -85,3 +85,8 @@ CREATE TABLE sys_category_record_mm (
 );
 
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+# Add cs_seo support
+CREATE TABLE tx_burkaprojects_domain_model_project (
+  tx_csseo int(11) unsigned NOT NULL default '0',
+);
