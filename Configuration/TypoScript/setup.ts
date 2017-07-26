@@ -74,3 +74,6 @@ plugin.tx_burkaprojects._CSS_DEFAULT_STYLE (
         color:green;
     }
 )
+
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:burkaprojects/Configuration/TypoScript/Extensions/cs_seo_setup.ts">
