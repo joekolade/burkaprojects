@@ -18,6 +18,10 @@ plugin.tx_burkaprojects_projectlist {
   mvc {
     #callDefaultActionIfActionCantBeResolved = 1
   }
+  settings {
+    imageWidth = {$plugin.tx_burkaprojects_projectlist.settings.list.imageWidth}
+    imageHeight = {$plugin.tx_burkaprojects_projectlist.settings.list.imageHeight}
+  }
 }
 
 plugin.tx_burkaprojects._CSS_DEFAULT_STYLE (

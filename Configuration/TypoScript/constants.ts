@@ -12,4 +12,11 @@ plugin.tx_burkaprojects_projectlist {
     # cat=plugin.tx_burkaprojects_projectlist//a; type=string; label=Default storage PID
     storagePid =
   }
+
+  settings {
+    list {
+      imageWidth = 546
+      imageHeight = 307c
+    }
+  }
 }
