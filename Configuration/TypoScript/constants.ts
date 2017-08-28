@@ -14,6 +14,9 @@ plugin.tx_burkaprojects_projectlist {
   }
 
   settings {
+
+    overallList = 25
+
     list {
       imageWidth = 546
       imageHeight = 307c

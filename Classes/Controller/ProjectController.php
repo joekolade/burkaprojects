@@ -47,6 +47,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         } else {
             $projects = $this->projectRepository->findAll();
         }
+
         $this->view->assign('projects', $projects);
     }
 

@@ -1,0 +1,32 @@
+<div class="row">
+	<f:if condition="{project -> f:count()}">
+		<f:then>
+			<div class="col-sm-8 tx-burkaprojects-header">
+				<h2>Projekte > {category.title}</h2>
+			</div>
+			<div class="col-sm-4">
+				<p class="text-right">
+					<f:link.page pageUid="{settings.overview}">
+						zurück zur Übersicht der Projekte
+					</f:link.page>
+					<br>
+					<f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.pageid')}">
+						{category.title}
+					</f:link.page>
+				</p>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="col-sm-8 tx-burkaprojects-header">
+				<h1>{category.title}</h1>
+			</div>
+			<div class="col-sm-4">
+				<p class="text-right">
+					<f:link.page pageUid="{settings.overallList}">
+						zurück zur Übersicht der Projekte
+					</f:link.page>
+				</p>
+			</div>
+		</f:else>
+	</f:if>
+</div>

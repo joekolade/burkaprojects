@@ -22,6 +22,8 @@ plugin.tx_burkaprojects_projectlist {
     }
 
     settings {
+        overallList = {$plugin.tx_burkaprojects_projectlist.settings.overallList}
+
         list {
             imageWidth = {$plugin.tx_burkaprojects_projectlist.settings.list.imageWidth}
             imageHeight = {$plugin.tx_burkaprojects_projectlist.settings.list.imageHeight}

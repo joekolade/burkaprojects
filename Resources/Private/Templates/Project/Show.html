@@ -1,26 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default"/>
 
-
-<f:section name="header">
-    <div class="row">
-        <div class="col-sm-8 tx-burkaprojects-header">
-            <h2>Projekte > {category.title}</h2>
-        </div>
-        <div class="col-sm-4">
-            <p class="text-right">
-                <f:link.page pageUid="{settings.overview}">
-                    zurück zur Übersicht
-                </f:link.page>
-                <br>
-                <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.pageid')}">
-                    {category.title}
-                </f:link.page>
-            </p>
-        </div>
-    </div>
-</f:section>
-
 <f:section name="main">
 
     <div class="row">
