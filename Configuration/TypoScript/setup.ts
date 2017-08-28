@@ -31,37 +31,22 @@ plugin.tx_burkaprojects_projectlist {
     }
 }
 
-plugin.tx_burkaprojects._CSS_DEFAULT_STYLE (
-    textarea.f3-form-error {
-        background-color:#FF9F9F;
-        border: 1px #FF0000 solid;
-    }
+// Extend breadcrumbs from template
 
-    input.f3-form-error {
-        background-color:#FF9F9F;
-        border: 1px #FF0000 solid;
-    }
+lib.bsr = USER_INT
+lib.bsr {
+	userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+	pluginName = Projectlist
+	extensionName = Burkaprojects
+	controller = Project
+	action = breadcrumb
+	vendorName = Joekolade
 
-    .tx-burkaprojects table {
-        border-collapse:separate;
-        border-spacing:10px;
-    }
+#	settings =< plugin.tx_burkaprojects.settings
+#	persistence =< plugin.tx_burkaprojects.persistence.storagePid
+#	view =< plugin.tx_burkaprojects.view
+}
 
-    .tx-burkaprojects table th {
-        font-weight:bold;
-    }
-
-    .tx-burkaprojects table td {
-        vertical-align:top;
-    }
-
-    .typo3-messages .message-error {
-        color:red;
-    }
-
-    .typo3-messages .message-ok {
-        color:green;
-    }
-)
+lib.breadCrumb.20 < lib.bsr
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:burkaprojects/Configuration/TypoScript/Extensions/cs_seo_setup.ts">

@@ -9,7 +9,7 @@ call_user_func(
             'Joekolade.Burkaprojects',
             'Projectlist',
             [
-                'Project' => 'list, show'
+                'Project' => 'list, show, breadcrumb'
             ],
             // non-cacheable actions
             [
