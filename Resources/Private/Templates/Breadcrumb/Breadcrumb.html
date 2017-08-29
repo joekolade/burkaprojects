@@ -1,0 +1,22 @@
+
+<f:if condition="{project}">
+	<f:then>
+		<f:if condition="{cat}">
+			<f:render section="item" arguments="{item: cat, pageid: cat.listpid}"></f:render>
+		</f:if>
+
+		<f:render section="item" arguments="{item: project, pageid: cat.listpid, active: '1'}"></f:render>
+	</f:then>
+	<f:else>
+		<f:if condition="{cat}">
+			<f:render section="item" arguments="{item: cat, pageid: cat.listpid, active: '1'}"></f:render>
+		</f:if>
+	</f:else>
+</f:if>
+
+
+<f:section name="item">
+	<li{f:if(condition:active, then: ' class="active"')}>
+		<f:link.page pageUid="{pageid}">{item.title}</f:link.page>
+	</li>
+</f:section>

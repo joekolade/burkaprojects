@@ -9,11 +9,25 @@ call_user_func(
             'Joekolade.Burkaprojects',
             'Projectlist',
             [
-                'Project' => 'list, show, breadcrumb'
+                'Project' => 'list, show, breadcrumb',
+                'Breadcrumb' => 'breadcrumb'
             ],
             // non-cacheable actions
             [
-                'Project' => ''
+                'Project' => '',
+                'Breadcrumb' => 'breadcrumb'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Joekolade.Burkaprojects',
+            'Breadcrumblist',
+            [
+                'Breadcrumb' => 'breadcrumb'
+            ],
+            // non-cacheable actions
+            [
+                'Breadcrumb' => 'breadcrumb'
             ]
         );
 

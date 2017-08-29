@@ -64,25 +64,4 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         }
         $this->view->assign('project', $project);
     }
-
-    /**
-     * action breadcrumb
-     *
-     * @param \Joekolade\Burkaprojects\Domain\Model\Project $project
-     * @return void
-     */
-    public function breadcrumbAction(\Joekolade\Burkaprojects\Domain\Model\Project $project = NULL)
-    {
-        return;
-        $category = $this->categoryRepository->findOneByListpid($GLOBALS['TSFE']->id);
-        $this->view->assign('cat', $category);
-
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($project);
-
-        if ($project) {
-//            $category = $this->categoryRepository->findByUid($this->settings['category']);
-            $this->view->assign('project', $project);
-        }
-
-    }
 }
