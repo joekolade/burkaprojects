@@ -7,3 +7,11 @@
   }
 }
 
+@media (min-width: 992px) {
+  .tx-burkaprojects {
+    .project-item.col-md-6:nth-child(odd) {
+      clear: both;
+    }
+  }
+}
+

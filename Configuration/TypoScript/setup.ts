@@ -61,19 +61,8 @@ TEMP.bsr {
     lib.breadCrumb.20 < TEMP.bsr
 [global]
 
-#[globalVar = GP:tx_burkaprojects_projectlist|project > 0]
-#
-#    lib.breadCrumb.30 = COA
-#    lib.breadCrumb.30 {
-#
-#        // Cat
-#
-#        // Project
-#
-#    }
-#
-#
-#
-[global]
-
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:burkaprojects/Configuration/TypoScript/Extensions/cs_seo_setup.ts">
+
+page.includeCSS {
+    tx_burkaprojects = EXT:burkaprojects/Resources/Public/Css/burkaprojects_styles.css
+}

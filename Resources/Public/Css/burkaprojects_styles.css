@@ -1,4 +1,8 @@
 .tx-burkaprojects-header h1, .tx-burkaprojects-header h2, .tx-burkaprojects-header h3 {
   margin-top: 0; }
 
+@media (min-width: 992px) {
+  .tx-burkaprojects .project-item.col-md-6:nth-child(odd) {
+    clear: both; } }
+
 /*# sourceMappingURL=burkaprojects_styles.css.map */
